@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "Lab3Q2_Yemisrach.json", false);
+//Send the request
+xhttp.send();
+// Read data
+jsonData = JSON.parse(xhttp.responseText);
+for (var i = 0; i< jsonData.itemlist.item.length; i++){
+   console.log(jsonData.itemlist.item[i].isbn)
+   console.log(jsonData.itemlist.item[i].title)
+   console.log(jsonData.itemlist.item[i].author)
+   console.log(jsonData.itemlist.item[i].publisher)
+   console.log(jsonData.itemlist.item[i].status)
+}
+output="<table border = '1'>";
+output += "<tr>";
+    output += "<thead>"; 
+        output += "<td>" + "ISBN" + "</td>";
+        output += "<td>" + "Title" + "</td>";
+        output += "<td>" + "Author(s)" + "</td>";
+        output += "<td>" + "Publisher" + "</td>";
+        output += "<td>" + "Status" + "</td>";
+    output += "</thead>";
+output += "</tr>";
+
+for (var i = 0; i< jsonData.itemlist.item.length; i++){
+    output += "<tr>";
+    {
+    output += "<td>" + jsonData.itemlist.item[i].isbn + "</td>";  
+    output += "<td>" + jsonData.itemlist.item[i].title + "</td>";  
+    output += "<td>" + jsonData.itemlist.item[i].authors.author + "</td>";  
+    output += "<td>" + jsonData.itemlist.item[i].publisher + "</td>";  
+    output += "<td>" + jsonData.itemlist.item[i].status + "</td>";  
+    } 
+    output += "</tr>";
+}
+output += "</table>";
+
+document.getElementById("demo").innerHTML=output;
+</script>
+
+</body>
+</html>

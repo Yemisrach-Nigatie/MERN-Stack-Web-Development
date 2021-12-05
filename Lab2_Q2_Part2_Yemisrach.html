@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+
+xhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Barrie,ca&appid=fc3bfa8aad504593cd890eaf7ef336bf", false);
+//Send the request
+xhttp.send();
+// Read data
+jsonData = JSON.parse(xhttp.responseText);
+console.log(jsonData);
+Temp_max = (jsonData.main.temp_max)-457.87;
+console.log(Temp_max);
+Temp_min = (jsonData.main.temp_min)-457.87;
+console.log(Temp_min);
+var sunrise = new Date(jsonData.sys.sunrise)
+console.log(sunrise);
+var sunset = new Date(jsonData.sys.sunset)
+console.log(sunset);
+    output="<table border = '1'>";
+output += "<tr>";
+    output += "<thead>"; 
+        output += "<td>" + "Temp_max" + "</td>";
+        output += "<td>" + "Temp_min" + "</td>";
+        output += "<td>" + "sunrise" + "</td>";
+        output += "<td>" + "sunset" + "</td>";
+    output += "</thead>";
+output += "</tr>";
+output += "<tr>";
+    {
+    output += "<td>" + Temp_max + "</td>";  
+    output += "<td>" + Temp_min  + "</td>";  
+    output += "<td>" + sunrise + "</td>";  
+    output += "<td>" + sunset + "</td>";  
+    } 
+output += "</tr>";
+
+output += "</table>";
+
+document.getElementById("demo").innerHTML=output;
+</script>
+</body>
+</html>

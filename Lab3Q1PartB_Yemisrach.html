@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "Lab3Q1PartA_Yemisrach.json", false);
+//Send the request
+xhttp.send();
+// Read data
+jsonData = JSON.parse(xhttp.responseText);
+
+for (var i = 0; i< jsonData.ClassA.length; i++){
+    console.log(jsonData.ClassA[i].Students.Student_name)
+    console.log(jsonData.ClassA[i].Students.Status)
+    console.log(jsonData.ClassA[i].Students.Sex)
+    console.log(jsonData.ClassA[i].Students.Age)
+}
+
+console.log('\n');    
+
+for (var i = 0; i< jsonData.ClassB.length; i++){
+    console.log(jsonData.ClassB[i].Students.Student_name)
+    console.log(jsonData.ClassB[i].Students.Status)
+    console.log(jsonData.ClassB[i].Students.Sex)
+    console.log(jsonData.ClassB[i].Students.Age)
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "Lab1_Q3_Yemisrach.json", false);
+//Send the request
+xhttp.send();
+// Read data
+jsonData = JSON.parse(xhttp.responseText);
+//display data
+output="<table border = '1'>";
+output += "<tr>";
+{
+    output += "<thead>"; 
+    {
+        output += "<td>" + "Plateno" + "</td>";
+        output += "<td>" + "Make" + "</td>";
+        output += "<td>" + "Model" + "</td>";
+        output += "<td>" + "Price" + "</td>";
+    }
+    output += "</thead>";
+}
+output += "</tr>";
+
+for(i=0;i<3;i++){
+    output += "<tr>";
+    {
+    output += "<td>" + jsonData[i].Plateno + "</td>";  
+    output += "<td>" +jsonData[i].Make + "</td>";  
+    output += "<td>" + jsonData[i].Model + "</td>";  
+    output += "<td>" + jsonData[i].Price + "</td>"; 
+    } 
+    output += "</tr>";
+}
+output += "</table>";
+document.getElementById("demo").innerHTML=output;
+
+</script>
+</body>
+</html>
+

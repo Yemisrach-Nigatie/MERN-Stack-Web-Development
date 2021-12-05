@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="Activity1"></p>
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "Lab2_Q1_Step1A_Yemisrach.xml", false);
+//Send the request
+xhttp.send();
+// Read data
+xmlDoc = xhttp.responseXML;
+console.log(xmlDoc);
+//Display data
+output="<table border = '1'>";
+output += "<tr>";
+    output += "<thead>"; 
+        output += "<td>" + "first_name" + "</td>";
+        output += "<td>" + "last_name" + "</td>";
+        output += "<td>" + "email" + "</td>";
+        output += "<td>" + "Phoneno" + "</td>";
+    output += "</thead>";
+output += "</tr>";
+for(i=0;i<20;i++){
+    output += "<tr>";
+    output += "<td>" + xmlDoc.getElementsByTagName("first_name")[i].innerHTML + "</td>";
+    output += "<td>" + xmlDoc.getElementsByTagName("last_name")[i].innerHTML + "</td>";
+    output += "<td>" + xmlDoc.getElementsByTagName("email")[i].innerHTML + "</td>";
+    output += "<td>" + xmlDoc.getElementsByTagName("PhoneNo")[i].innerHTML + "</td>";
+    output += "</tr>";
+}
+output += "</table>";
+document.getElementById("Activity1").innerHTML=output;
+
+</script>
+
+</body>
+</html>

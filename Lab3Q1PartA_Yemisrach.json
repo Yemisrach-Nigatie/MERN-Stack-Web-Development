@@ -1,0 +1,33 @@
+{
+	"ClassA": [
+		{
+			"id": "0001",
+			"Semester": "A",
+			"Course": "JAVA",
+			"Students": 
+			{
+				"id":1,
+				"Student_name":"Selam", 
+				"Status":"Passed", 
+				"Sex":"F",
+				"Age":"23"
+			 }
+		}
+	],
+
+	"ClassB": [
+		{
+			"id": "0001",
+			"Semester": "B",
+			"Course": "Database",
+			"Students": 
+			{
+				"id":1,
+				"Student_name":"Henok", 
+				"Status":"Failed", 
+				"Sex":"F",
+				"Age":"23"
+			 }
+		}
+	]
+}

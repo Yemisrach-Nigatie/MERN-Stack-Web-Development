@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Hobbies> 
+    <Hobby Category="Sport"> 
+       <firstname>Henok</firstname> 
+       <lastname>Get</lastname> 
+       <Hobby1>Swimming</Hobby1>
+    </Hobby> 
+        <Hobby Category="Media"> 
+        <firstname>Fire</firstname> 
+       <lastname>Wondim</lastname> 
+       <Hobby1>Watching Movie</Hobby1>
+    </Hobby>  
+   <Hobby Category="Nature"> 
+        <firstname>Biruk</firstname> 
+       <lastname>Tesfa</lastname> 
+       <Hobby1>Taking pics</Hobby1>
+    </Hobby>    
+   <Hobby Category="Fashion"> 
+       <firstname>Tigist</firstname> 
+       <lastname>Get</lastname> 
+       <Hobby1>Shopping</Hobby1>
+    </Hobby>   
+   <Hobby Category="Social"> 
+        <firstname>Selam</firstname> 
+       <lastname>Yihun</lastname> 
+       <Hobby1>Meet up</Hobby1>
+    </Hobby>    
+    <Hobby Category="Tech"> 
+       <firstname>Bilen</firstname> 
+       <lastname>Yitu</lastname> 
+       <Hobby1>Coding</Hobby1>
+    </Hobby> 
+   <Hobby Category="Sport"> 
+       <firstname>Fikr</firstname> 
+       <lastname>Yilkal</lastname> 
+       <Hobby1>Basket Ball</Hobby1>
+    </Hobby> 
+   <Hobby Category="Media">  
+        <firstname>Tesfa</firstname> 
+       <lastname>Mulu</lastname> 
+       <Hobby1>Watching News</Hobby1>
+    </Hobby>    
+   <Hobby Category="Sport"> 
+       <firstname>Yonas</firstname> 
+       <lastname>Melkam</lastname> 
+       <Hobby1>Exercise</Hobby1>
+    </Hobby> 
+   <Hobby Category="Sport"> 
+      <firstname>Miky</firstname> 
+      <lastname>Get</lastname> 
+      <Hobby1>Tense</Hobby1>
+    </Hobby> 
+    </Hobbies> 

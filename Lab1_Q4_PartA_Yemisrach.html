@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="Activity1"></p>
+<script>
+//Create the XHR object
+var xhttp = new XMLHttpRequest();
+//Open the file
+xhttp.open("GET", "Lab1_Q2_Yemisrach.xml", false);
+//Send the request
+xhttp.send();
+// Read data
+xmlDoc = xhttp.responseXML;
+console.log(xmlDoc);
+//Display on the page 
+output="<table border = '1'>";
+output += "<tr>";
+    output += "<thead>"; 
+        output += "<td>" + "Empno" + "</td>";
+        output += "<td>" + "Empname" + "</td>";
+        output += "<td>" + "Salary" + "</td>";
+    output += "</thead>";
+output += "</tr>";
+for(i=0;i<3;i++){
+    output += "<tr>";
+    output += "<td>" + xmlDoc.getElementsByTagName("Empno")[i].innerHTML + "</td>";
+    output += "<td>" + xmlDoc.getElementsByTagName("Empname")[i].innerHTML + "</td>";
+    output += "<td>" + xmlDoc.getElementsByTagName("Salary")[i].innerHTML + "</td>";
+    output += "</tr>";
+}
+output += "</table>";
+document.getElementById("Activity1").innerHTML=output;
+</script>
+</body>
+</html>
